@@ -563,7 +563,14 @@ test("uncontrolled props", () => {
 });
 
 test("default props", () => {
-	renderer.render(<input type="text" />, document.body);
+	renderer.render(
+		<Fragment>
+			<input />
+			<input type="text" />
+		</Fragment>, 
+		document.body);
+			
+	Assert.equal(document.querySelectorAll('input').length, 2);	
 	Assert.equal(document.querySelectorAll('input[type="text"]').length, 1);
 });
 
