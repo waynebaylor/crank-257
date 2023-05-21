@@ -562,4 +562,9 @@ test("uncontrolled props", () => {
 	renderer.render(<input value={Copy} />, document.body);
 });
 
+test("default props", () => {
+	renderer.render(<input type="text" />, document.body);
+	Assert.equal(document.querySelectorAll('input[type="text"]').length, 1);
+});
+
 test.run();
