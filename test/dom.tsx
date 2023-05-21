@@ -570,7 +570,7 @@ test("default props", () => {
 		</Fragment>,
 		document.body,
 	);
-	Assert.equal(document.querySelectorAll("input").length, 2);	
+	Assert.equal(document.querySelectorAll("input").length, 2);
 	Assert.equal(document.querySelectorAll('input[type="text"]').length, 1);
 });
 
